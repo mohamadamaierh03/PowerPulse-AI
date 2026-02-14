@@ -2,7 +2,7 @@
 ### **Comprehensive Technical Documentation v1.0**
 
 **Developer:** Mohammad Amaierh  
-**Academic Field:** Electrical Engineering & Software Development  
+**Academic Field:**  Software Development  
 **Core Technologies:** Django, CrewAI, OpenAI (GPT-4o & DALL-E 3), Twilio WhatsApp API, Ngrok.
 
 ---

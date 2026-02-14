@@ -1,0 +1,29 @@
+planning_task:
+  description: >
+    Analyze the user's request: "{user_query}".
+    Classify it into 'Emergency', 'Technical Fault', or 'Energy Consultation'.
+    Provide a brief internal reasoning to guide the next expert, but do not provide a final answer to the user.
+  expected_output: >
+    A JSON-like summary containing the 'category' and 'technical_keywords'.
+  agent: energy_planner
+
+consultation_task:
+  description: >
+    Provide a professional explanation for the user's inquiry: "{user_query}". 
+    Focus on efficiency and best practices. 
+    Mandatory: Use the energy_visual_tool to generate a relevant diagram.
+  expected_output: >
+    A concise technical guide (max 1000 characters) written in a professional tone, 
+    followed by the generated image URL.
+  agent: energy_advisor
+
+technical_diagnosis_task:
+  description: >
+    Diagnose the electrical issue: "{user_query}". 
+    1. Start with CRITICAL safety warnings in bold.
+    2. Provide logical step-by-step troubleshooting.
+    3. Mandatory: Use energy_visual_tool to generate a technical schematic or safety poster.
+  expected_output: >
+    A technical report (max 1200 characters) starting with safety precautions, 
+    then troubleshooting steps, ending with the generated image URL.
+  agent: technical_specialist
